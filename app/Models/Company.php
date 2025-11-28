@@ -16,6 +16,11 @@ class Company extends Model
         'name'
     ];
 
+    public $hidden = [
+        'created_at',
+        'updated_at',
+    ];
+
     /**
      * Relation HasMany with Model Task.
      *
