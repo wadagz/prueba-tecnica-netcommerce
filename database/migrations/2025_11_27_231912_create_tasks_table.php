@@ -17,8 +17,8 @@ return new class extends Migration
             $table->text('description');
             $table->foreignId('user_id')->constrained('users');
             $table->foreignId('company_id')->constrained('companies');
-            $table->boolean('is_completed');
-            $table->timestamp('start_at');
+            $table->boolean('is_completed')->default(false);
+            $table->timestamp('start_at')->default(now());
             $table->timestamp('expired_at')->nullable();
             $table->timestamps();
         });
