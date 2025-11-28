@@ -2,16 +2,17 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Resources\Company\CompanyResource;
 use App\Models\Company;
-use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Http\Request;
+use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 
 class CompanyController extends Controller
 {
     /**
      * Gets a collection of Companies filtered by their name.
      */
-    public function index(Request $request): Collection
+    public function index(Request $request): AnonymousResourceCollection
     {
         $searchTerm = $request->query('search', '');
 
@@ -19,6 +20,6 @@ class CompanyController extends Controller
             ->with(['tasks'])
             ->get();
 
-        return $companies;
+        return CompanyResource::collection($companies);
     }
 }
