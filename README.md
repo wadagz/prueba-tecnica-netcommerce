@@ -14,8 +14,8 @@ Se implementaron dos endpoint
 
 #### Endpoint `/companies GET`
 
-![companies GET](/storage/app/evidences/companies-get-endpoint-with-search.png)
+![companies GET](/public/evidences/companies-get-endpoint-with-search.png)
 
 #### Endpoint `/tasks/create POST`
 
-![tasks/create POST](/storage/app/evidences/task-store-endpoint.png)
+![tasks/create POST](/public/evidences/task-store-endpoint.png)
